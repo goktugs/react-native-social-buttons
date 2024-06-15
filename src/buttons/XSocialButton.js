@@ -11,26 +11,26 @@ import {
 } from "react-native";
 
 /**
- * Style definition for the TwitterSocialButton component.
+ * Style definition for the XSocialButton component.
  */
 const styles = StyleSheet.create({
   /**
    * Style for the container TouchableOpacity.
    */
-  twitterStyle: {
+  xStyle: {
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "#00acee",
+    backgroundColor: "#000000",
     borderWidth: 0.5,
-    borderColor: "#fff",
+    borderColor: "#FFF",
     height: 40,
     width: 220,
     borderRadius: 5,
     margin: 5,
   },
   /**
-   * Style for the Twitter icon Image.
+   * Style for the X icon Image.
    */
   imageIconStyle: {
     padding: 10,
@@ -43,44 +43,44 @@ const styles = StyleSheet.create({
    * Style for the text inside the TouchableOpacity.
    */
   textStyle: {
-    color: "#fff",
+    color: "#FFF",
     marginLeft: 20,
     marginRight: 20,
   },
 });
 
 /**
- * Props for the TwitterSocialButton component.
+ * Props for the XSocialButton component.
  *
- * @typedef {Object} TwitterSocialButtonProps
+ * @typedef {Object} XSocialButtonProps
  * @property {(event: GestureResponderEvent) => void} onPress - Function to be called when the button is pressed.
  * @property {ViewStyle} [buttonViewStyle] - Style for the entire button view.
- * @property {ImageStyle} [logoStyle] - Style for the Twitter logo Image.
+ * @property {ImageStyle} [logoStyle] - Style for the X logo Image.
  * @property {TextStyle} [textStyle] - Style for the text inside the button.
  * @property {string} [buttonText] - Text to be displayed inside the button.
  */
 
 /**
- * A custom React component representing a social login button for Twitter.
+ * A custom React component representing a social login button for X.
  *
- * @param {TwitterSocialButtonProps} props - The props for the component.
- * @returns {React.JSX.Element} JSX element representing the TwitterSocialButton.
+ * @param {XSocialButtonProps} props - The props for the component.
+ * @returns {React.JSX.Element} JSX element representing the XSocialButton.
  */
-const TwitterSocialButton = (props) => {
+const XSocialButton = (props) => {
   return (
     <TouchableOpacity
-      style={{ ...styles.twitterStyle, ...props.buttonViewStyle }}
+      style={{ ...styles.xStyle, ...props.buttonViewStyle }}
       onPress={props.onPress}
     >
       <Image
-        source={require("../images/twitter.png")}
+        source={require("../images/x.png")}
         style={{ ...styles.imageIconStyle, ...props.logoStyle }}
       />
       <Text style={{ ...styles.textStyle, ...props.textStyle }}>
-        {props.buttonText ? props.buttonText : "Sign in with Twitter"}
+        {props.buttonText ? props.buttonText : "Sign in with X"}
       </Text>
     </TouchableOpacity>
   );
 };
 
-export default TwitterSocialButton;
+export default XSocialButton;

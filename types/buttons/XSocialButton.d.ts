@@ -1,14 +1,12 @@
-export default TwitterSocialButton;
-export type TwitterSocialButtonProps = {
+export default XSocialButton;
+export type XSocialButtonProps = {
   onPress: (event: GestureResponderEvent) => void;
   buttonViewStyle?: ViewStyle;
   logoStyle?: ImageStyle;
   textStyle?: TextStyle;
   buttonText?: string;
 };
-declare function TwitterSocialButton(
-  props: TwitterSocialButtonProps
-): React.JSX.Element;
+declare function XSocialButton(props: XSocialButtonProps): React.JSX.Element;
 import { GestureResponderEvent } from "react-native";
 import { ViewStyle } from "react-native";
 import { ImageStyle } from "react-native";
